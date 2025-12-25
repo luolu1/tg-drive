@@ -63,7 +63,7 @@ docker run -d \
   -p 8000:8000 \
   --env-file .env \
   -v $(pwd)/data:/data \
-  yourname/tg-drive:latest
+  luocloud/tg-drive:latest
 ```
 
 ---
@@ -73,7 +73,7 @@ docker run -d \
 浏览器访问：
 
 ```
-http://localhost:8000/admin
+http://localhost:8000/admin/login
 ```
 
 ---
