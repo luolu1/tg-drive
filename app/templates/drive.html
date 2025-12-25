@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Telegram Drive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div class="max-w-6xl mx-auto p-6">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl font-semibold">Telegram Drive</h1>
+      <div class="text-sm text-gray-500">Admin Panel</div>
+    </div>
+    <!-- Upload -->
+    <div id="dropZone"
+      class="border-2 border-dashed border-gray-300 rounded-xl bg-white p-6 mb-6
+             min-h-[170px] flex flex-col items-center justify-center text-center select-none">
+      <div class="text-gray-800 font-medium mb-1">拖拽文件到这里上传</div>
+      <div class="text-gray-400 text-sm mb-4">或点击选择文件</div>
+      <input id="filePicker" type="file" class="hidden" multiple />
+      <div class="flex gap-2">
+        <button id="pickBtn" class="px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">
+          选择文件上传
+        </button>
+        <button id="refreshBtn" class="px-4 py-2 rounded-md border bg-white hover:bg-gray-100">
+          刷新列表
+        </button>
+      </div>
+      <div id="uploadStatus" class="mt-4 text-sm text-gray-500"></div>
+    </div>
+    <!-- Controls -->
+    <div class="flex flex-col md:flex-row gap-3 mb-3">
+      <input id="search"
+        class="w-full rounded-md border border-gray-200 px-3 py-2 bg-white"
+        placeholder="搜索文件名（实时过滤）" />
+      <div class="flex gap-2 items-center">
+        <label class="text-sm text-gray-600">分享有效期</label>
+        <select id="shareExpire" class="border rounded-md px-2 py-2 bg-white">
+          <option value="1">1小时</option>
+          <option value="6">6小时</option>
+          <option value="24" selected>24小时</option>
+          <option value="72">72小时</option>
+          <option value="168">7天</option>
+        </select>
+      </div>
+    </div>
+    <!-- Files -->
+    <div class="bg-white rounded-xl border overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-100 text-gray-600">
+          <tr>
+            <th class="text-left p-3">文件名</th>
+            <th class="text-left p-3 w-[190px]">创建时间</th>
+            <th class="text-left p-3 w-[260px]">操作</th>
+          </tr>
+        </thead>
+        <tbody id="fileList" class="divide-y"></tbody>
+      </table>
+    </div>
+    <div class="mt-4 text-xs text-gray-400">
+      如果你刚更新了 app.js 但页面没变化，请强制刷新（Ctrl + F5）。
+    </div>
+  </div>
+  <script src="/static/app.js?v=20251223-01"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+httpx
+jinja2
+fastapi
+uvicorn
+python-telegram-bot==20.*
+python-multipart
+sqlalchemy
+pydantic
+python-dotenv
