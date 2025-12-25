@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   tg-drive:
-    image: tg-drive:latest
+    image: luocloud/tg-drive:latest
     container_name: tg-drive
 
     restart: unless-stopped
