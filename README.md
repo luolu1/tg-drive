@@ -1,4 +1,3 @@
-````markdown
 # 📁 Telegram Drive（tg-drive）
 
 **Telegram Drive** 是一个基于 **FastAPI + Telegram Bot** 构建的私有网盘系统。  
@@ -133,5 +132,3 @@ MIT License
 
 欢迎 Star / Fork / 自行部署 🚀
 
-```
-```
